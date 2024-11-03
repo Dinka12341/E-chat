@@ -5,7 +5,7 @@ const app = express();
 const PORT = 3003;
 
 // Создаем WebSocket-сервер
-const wss = new WebSocket.Server({ port: PORT });
+const socket = new WebSocket("wss://e-chat-pg90.onrender.com");
 
 wss.on('connection', (ws) => {
     console.log('Клиент подключен');
